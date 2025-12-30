@@ -233,7 +233,7 @@ li span{
   }
   
   li:hover span{
-    width: 85%;
+    width: 75%;
     background-color: var(--scrollbar-color)!important;
   }
 

@@ -145,8 +145,9 @@ function CargarDatosPublicacion() {
         });
 
         // Detalles Publicaciones
-        inmueble.cocheraString = inmueble.cocheraString ? "Si" : "No";
-        inmueble.amobladoString = inmueble.amobladoString ? "Si" : "No";
+        inmueble.cocheraString = inmueble.cocheraString === "True" ? "Si" : "No";
+        inmueble.amobladoString = inmueble.amobladoString === "True" ? "Si" : "No";
+
 
         detallesPublicaciones += `
           <p style="font-weight: 300; font-size: 26px; margin-top: -5px">Detalles</p>
@@ -156,8 +157,8 @@ function CargarDatosPublicacion() {
             <p><i class="fa-solid fa-bed"></i> Habitaciones: ${inmueble.dormitoriosString || 'Consultar'}</p>
             <p><i class="fa-solid fa-bath"></i> Baños: ${inmueble.baniosString || 'Consultar'}</p>
             <p><i class="fa-solid fa-utensils"></i> Ambientes: ${inmueble.cantidadAmbientesString || 'Consultar'}</p>
-            <p><i class="fa-solid fa-car"></i> Cochera: ${inmueble.cocheraString || 'Consultar'}</p>
-            <p><i class="fa-solid fa-couch"></i> Amoblado: ${inmueble.amobladoString || 'Consultar'}</p>
+            <p><i class="fa-solid fa-car"></i> Cochera: ${inmueble.cocheraString}</p>
+            <p><i class="fa-solid fa-couch"></i> Amoblado: ${inmueble.amobladoString}</p>
             <p><i class="fa-solid fa-city"></i> Barrio: ${inmueble.barrioString || 'Consultar'}</p>
             <p><i class="fa-solid fa-signs-post"></i> Dirección:
               ${inmueble.direccionString || inmueble.nroDireccionString 
